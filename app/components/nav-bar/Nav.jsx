@@ -23,7 +23,7 @@ export default function Nav() {
     setIsAccordionOpen(!isAccordionOpen);
   };
   return (
-    <div className='flex flex-col w-screen'>
+    <div className='flex flex-col '>
       <div className='flex py-[1rem] bg-white border-b border-solid border-gray-300 text-black'>
         <div className='flex items-center justify-between px-[10rem] w-full'>
           <div>
@@ -31,7 +31,7 @@ export default function Nav() {
               href='/en-us'
               className='font-bold text-[1.7rem] text-[#ffa500]'
             >
-              Stove<span className='font-light text-black'>Yo</span>
+              Stove<span className='font-light text-black'>Yange</span>
             </Link>
           </div>
           <div className='text-[13px] flex gap-3'>
@@ -56,15 +56,15 @@ export default function Nav() {
           </div>
         </div>
       </div>
-      <div className='relative flex py-[1rem] border-b border-solid border-gray-300 text-black w-screen px-[10rem]'>
+      <div className='relative flex py-[1rem] border-b border-solid border-gray-300 text-black  px-[10rem]'>
         <div className='flex items-center justify-between  w-full flex-wrap'>
           <div className='flex justify-start gap-9'>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Fire Pits</NavigationMenuTrigger>
-                  <NavigationMenuContent className='bg-orange-500 overflow-hidden w-screen'>
-                    <NavigationMenuLink className='py-6 bg-white text-black w-screen flex justify-between items-start px-[15rem]'>
+                  <NavigationMenuContent className='bg-orange-500 overflow-hidden '>
+                    <NavigationMenuLink className='py-6 bg-white text-black  flex justify-between items-start px-[15rem]'>
                       <div className='flex flex-col gap-4'>
                         <h3 className='font-bold'>Fire pits</h3>
                         <div className='text-[13px] flex flex-col gap-4 font-light'>
@@ -195,7 +195,7 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Pizza Oven</NavigationMenuTrigger>
                   <NavigationMenuContent className='w-full bg-pink-700'>
-                    <NavigationMenuLink className='py-6 bg-white text-black w-screen flex justify-between items-start px-[15rem]'>
+                    <NavigationMenuLink className='py-6 bg-white text-black  flex justify-between items-start px-[15rem]'>
                       <div className='flex flex-col gap-4'>
                         <h3 className='font-bold'>Pizza Oven</h3>
                         <div className='text-[13px] flex flex-col gap-4 font-light'>
@@ -323,7 +323,7 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Bundles</NavigationMenuTrigger>
                   <NavigationMenuContent className='w-full bg-pink-700'>
-                    <NavigationMenuLink className='py-6 bg-white text-black w-screen flex justify-between items-start px-[15rem]'>
+                    <NavigationMenuLink className='py-6 bg-white text-black  flex justify-between items-start px-[15rem]'>
                       <div className='flex flex-col gap-4'>
                         <h3 className='font-bold'>Pizza Oven</h3>
                         <div className='text-[13px] flex flex-col gap-4 font-light'>
@@ -451,7 +451,7 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Accessories</NavigationMenuTrigger>
                   <NavigationMenuContent className='w-full bg-pink-700'>
-                    <NavigationMenuLink className='py-6 bg-white text-black w-screen flex justify-between items-start px-[15rem]'>
+                    <NavigationMenuLink className='py-6 bg-white text-black  flex justify-between items-start px-[15rem]'>
                       <div className='flex flex-col gap-4'>
                         <h3 className='font-bold'>Pizza Oven</h3>
                         <div className='text-[13px] flex flex-col gap-4 font-light'>
@@ -579,7 +579,7 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Patio & Garden</NavigationMenuTrigger>
                   <NavigationMenuContent className='w-full bg-pink-700'>
-                    <NavigationMenuLink className='py-6 bg-white text-black w-screen flex justify-between items-start px-[15rem]'>
+                    <NavigationMenuLink className='py-6 bg-white text-black  flex justify-between items-start px-[15rem]'>
                       <div className='flex flex-col gap-4'>
                         <h3 className='font-bold'>Pizza Oven</h3>
                         <div className='text-[13px] flex flex-col gap-4 font-light'>
@@ -707,7 +707,7 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Fuel</NavigationMenuTrigger>
                   <NavigationMenuContent className='w-full bg-pink-700'>
-                    <NavigationMenuLink className='py-6 bg-white text-black w-screen flex justify-between items-start px-[15rem]'>
+                    <NavigationMenuLink className='py-6 bg-white text-black  flex justify-between items-start px-[15rem]'>
                       <div className='flex flex-col gap-4'>
                         <h3 className='font-bold'>Pizza Oven</h3>
                         <div className='text-[13px] flex flex-col gap-4 font-light'>
@@ -835,7 +835,7 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Camp Stoves</NavigationMenuTrigger>
                   <NavigationMenuContent className='w-full bg-pink-700'>
-                    <NavigationMenuLink className='py-6 bg-white text-black w-screen flex justify-between items-start px-[15rem]'>
+                    <NavigationMenuLink className='py-6 bg-white text-black  flex justify-between items-start px-[15rem]'>
                       <div className='flex flex-col gap-4'>
                         <h3 className='font-bold'>Pizza Oven</h3>
                         <div className='text-[13px] flex flex-col gap-4 font-light'>
@@ -963,7 +963,7 @@ export default function Nav() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Personalize</NavigationMenuTrigger>
                   <NavigationMenuContent className='w-full bg-pink-700'>
-                    <NavigationMenuLink className='py-6 bg-white text-black w-screen flex justify-between items-start px-[15rem]'>
+                    <NavigationMenuLink className='py-6 bg-white text-black  flex justify-between items-start px-[15rem]'>
                       <div className='flex flex-col gap-4'>
                         <h3 className='font-bold'>Pizza Oven</h3>
                         <div className='text-[13px] flex flex-col gap-4 font-light'>
