@@ -23,9 +23,9 @@ export default function Nav() {
     setIsAccordionOpen(!isAccordionOpen);
   };
   return (
-    <div className='flex flex-col sticky w-screen z-[3]'>
+    <div className='flex flex-col w-screen'>
       <div className='flex py-[1rem] bg-white border-b border-solid border-gray-300 text-black'>
-        <div className='flex items-center justify-between px-[15rem] w-full'>
+        <div className='flex items-center justify-between px-[10rem] w-full'>
           <div>
             <Link
               href='/en-us'
@@ -56,39 +56,8 @@ export default function Nav() {
           </div>
         </div>
       </div>
-      <div className='relative flex py-[1rem] border-b border-solid border-gray-300 text-black w-screen px-[15rem]'>
-        <div className='flex flex-row-reverse items-center justify-between  w-full flex-wrap'>
-          <div className='flex gap-8'>
-            <form className='flex items-center gap-3'>
-              <div className='relative w-full'>
-                <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
-                  <button type='button'>
-                    <Search color='#000000' />
-                  </button>
-                </div>
-                <input
-                  type='text'
-                  id='voice-search'
-                  className='bg-gray-50 text-gray-900 text-sm rounded-full focus:outline-none focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-[#E7E7E7]
-
-                  ] dark:placeholder-gray-400 dark:text-black'
-                  placeholder='Search...'
-                  required
-                />
-              </div>
-            </form>
-            <div className='flex items-center gap-4'>
-              <button>
-                <UserCircle2 />
-              </button>
-              <button className='relative'>
-                <ShoppingCart />
-                <div className='rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-2 font-bold'>
-                  20
-                </div>
-              </button>
-            </div>
-          </div>
+      <div className='relative flex py-[1rem] border-b border-solid border-gray-300 text-black w-screen px-[10rem]'>
+        <div className='flex items-center justify-between  w-full flex-wrap'>
           <div className='flex justify-start gap-9'>
             <NavigationMenu>
               <NavigationMenuList>
@@ -1117,6 +1086,37 @@ export default function Nav() {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+          </div>
+          <div className='flex gap-8'>
+            <form className='flex items-center gap-3'>
+              <div className='relative w-full'>
+                <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+                  <button type='button'>
+                    <Search color='#000000' />
+                  </button>
+                </div>
+                <input
+                  type='text'
+                  id='voice-search'
+                  className='bg-gray-50 text-gray-900 text-sm rounded-full focus:outline-none focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-[#E7E7E7]
+
+                  ] dark:placeholder-gray-400 dark:text-black'
+                  placeholder='Search...'
+                  required
+                />
+              </div>
+            </form>
+            <div className='flex items-center gap-4'>
+              <button>
+                <UserCircle2 />
+              </button>
+              <button className='relative'>
+                <ShoppingCart />
+                <div className='rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-2 font-bold'>
+                  20
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
