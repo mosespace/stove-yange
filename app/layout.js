@@ -8,7 +8,7 @@ const inter = Poppins({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 export const metadata = {
-  title: "StoveYo",
+  title: "OwinoUg",
   description: "Created by Kisakye Moses",
 };
 
