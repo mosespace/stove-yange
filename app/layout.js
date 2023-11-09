@@ -1,5 +1,5 @@
-import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Poppins } from "next/font/google";
 import Alert from "./components/Alert";
 import Nav from "./components/nav-bar/Nav";
 
@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         <Alert />
         <Nav />
         {children}
+        <script src='../path/to/flowbite/dist/flowbite.min.js'></script>
       </body>
     </html>
   );
