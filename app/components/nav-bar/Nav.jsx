@@ -13,6 +13,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { Dropdown } from "flowbite-react";
 import DemoImage from "../../../public/HomeCamp_Toolangi_FinalHigh-56.webp";
 import { ShoppingCart, UserCircle2, Search, ChevronDown } from "lucide-react";
 
@@ -24,14 +25,14 @@ export default function Nav() {
   };
   return (
     <div className='flex flex-col '>
-      <div className='flex py-[1rem] bg-white border-b border-solid border-gray-300 text-black'>
+      <div className='flex py-[.8rem] bg-white border-b border-solid border-gray-300 text-black'>
         <div className='flex items-center justify-between px-[10rem] w-full'>
           <div>
             <Link
               href='/en-us'
               className='font-bold text-[1.7rem] text-[#ffa500]'
             >
-              Stove<span className='font-light text-black'>Yange</span>
+              Owino<span className='font-light text-black'>Ug</span>
             </Link>
           </div>
           <div className='text-[13px] flex gap-3'>
@@ -56,14 +57,136 @@ export default function Nav() {
           </div>
         </div>
       </div>
-      <div className='relative flex py-[1rem] border-b border-solid border-gray-300 text-black  px-[10rem]'>
+      <div className='relative flex justify-between py-[.8rem] border-b border-solid border-gray-300 text-black  px-[10rem]'>
+        <form>
+          <div className='flex'>
+            <label
+              for='search-dropdown'
+              className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'
+            >
+              Your Email
+            </label>
+            <button
+              id='dropdown-button'
+              data-dropdown-toggle='dropdown'
+              className='flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white dark:border-gray-600'
+              type='button'
+            >
+              All categories
+              <svg
+                className='w-2.5 h-2.5 ml-2.5'
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 10 6'
+              >
+                <path
+                  stroke='currentColor'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='m1 1 4 4 4-4'
+                />
+              </svg>
+            </button>
+            <div
+              id='dropdown'
+              className='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700'
+            >
+              <ul
+                className='py-2 text-sm text-gray-700 dark:text-gray-200'
+                aria-labelledby='dropdown-button'
+              >
+                <Link href='/'>
+                  <button
+                    type='button'
+                    className='inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
+                  >
+                    Mockups
+                  </button>
+                </Link>
+                <Link href='/'>
+                  <button
+                    type='button'
+                    className='inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
+                  >
+                    Templates
+                  </button>
+                </Link>
+                <Link href='/'>
+                  <button
+                    type='button'
+                    className='inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
+                  >
+                    Design
+                  </button>
+                </Link>
+                <Link href='/'>
+                  <button
+                    type='button'
+                    className='inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
+                  >
+                    Logos
+                  </button>
+                </Link>
+              </ul>
+            </div>
+            <div className='relative w-full'>
+              <input
+                type='search'
+                id='search-dropdown'
+                className='block p-2.5 w-[450px] z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 dark:bg-gray-700 dark:border-l-gray-700 outline-0 dark:border-gray-600 dark:placeholder-gray-400 focus:outline-none dark:text-white'
+                placeholder='Search products brands and categories...'
+                required
+              />
+              <button
+                type='submit'
+                className='absolute top-0 right-0 p-2.5 text-sm font-medium h-full text-white bg-[#ffa500] rounded-r-lg border border-[#ffa500]'
+              >
+                <Search />
+                <span className='sr-only'>Search</span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div className='flex items-center gap-8'>
+          {/* <button className='flex gap-4'>
+            <UserCircle2 />
+            <span className='font-bold text-base'>Account</span>
+          </button> */}
+
+          <Dropdown
+            className=''
+            label={
+              <div className='flex gap-4'>
+                <UserCircle2 />
+                <span className='text-base'>Account</span>
+              </div>
+            }
+          >
+            <Dropdown.Item>SignIn</Dropdown.Item>
+            <Dropdown.Item>Settings</Dropdown.Item>
+            <Dropdown.Item>Earnings</Dropdown.Item>
+            <Dropdown.Item>Sign out</Dropdown.Item>
+          </Dropdown>
+          <button className='relative flex gap-5'>
+            <ShoppingCart />
+            <div className='rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-2 font-bold'>
+              20
+            </div>
+            <p className='text-lg font-bold'>Cart</p>
+          </button>
+        </div>
+      </div>
+      {/* <div className='relative flex py-[1rem] border-b border-solid border-gray-300 text-black  px-[10rem]'>
         <div className='flex items-center justify-between  w-full flex-wrap'>
           <div className='flex justify-start gap-9'>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Fire Pits</NavigationMenuTrigger>
-                  <NavigationMenuContent className='bg-orange-500 overflow-hidden '>
+                  <NavigationMenuContent className='bg-[#ffa500] overflow-hidden '>
                     <NavigationMenuLink className='py-6 bg-white text-black  flex justify-between items-start px-[15rem]'>
                       <div className='flex flex-col gap-4'>
                         <h3 className='font-bold'>Fire pits</h3>
@@ -1119,7 +1242,7 @@ export default function Nav() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
