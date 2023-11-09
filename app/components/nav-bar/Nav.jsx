@@ -1,28 +1,28 @@
 "use client";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuContent,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-  NavigationMenuIndicator,
-} from "@/components/ui/navigation-menu";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
+import { categories } from "@/data";
 import { Dropdown } from "flowbite-react";
-import DemoImage from "../../../public/HomeCamp_Toolangi_FinalHigh-56.webp";
+import { useEffect, useState } from "react";
 import { ShoppingCart, UserCircle2, Search, ChevronDown } from "lucide-react";
 
 export default function Nav() {
-  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const handleAccordionToggle = () => {
-    setIsAccordionOpen(!isAccordionOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className='flex flex-col '>
       <div className='flex py-[.8rem] bg-white border-b border-solid border-gray-300 text-black'>
@@ -36,28 +36,51 @@ export default function Nav() {
             </Link>
           </div>
           <div className='text-[13px] flex gap-3'>
-            <Link href='/' className='hover:text-[#FFC862]'>
-              Rewards |
-            </Link>
-            <Link href='/' className='hover:text-[#FFC862]'>
-              Gift Cards |
-            </Link>
-            <Link href='/' className='hover:text-[#FFC862]'>
-              Product Finder |
-            </Link>
-            <Link href='/' className='hover:text-[#FFC862]'>
-              Community |
-            </Link>
-            <Link href='/' className='hover:text-[#FFC862]'>
-              Corporate Sales |
-            </Link>
-            <Link href='/' className='hover:text-[#FFC862]'>
-              Help
-            </Link>
+            {categories.map((category, id) => {
+              return (
+                <Link
+                  key={id}
+                  href={`/categories/${category.slug}`}
+                  className='hover:text-[#FFC862]'
+                >
+                  {category.title} |
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
-      <div className='relative flex justify-between py-[.8rem] border-b border-solid border-gray-300 text-black  px-[10rem]'>
+
+      <div
+        className={`${
+          scrolled
+            ? "fixed top-0 left-0 right-0 z-[230] bg-white shadow-xl flex justify-center items-center gap-8 w-full py-[.8rem] border-b border-solid border-gray-300 text-black  lg:px-20"
+            : "flex justify-center items-center gap-8 w-full py-[.8rem] border-b border-solid border-gray-300 text-black  lg:px-20"
+        }`}
+      >
+        {scrolled ? (
+          <Link href='/en-us' className='font-bold text-xl text-[#ffa500]'>
+            Owino<span className='font-light text-black'>Ug</span>
+          </Link>
+        ) : (
+          ""
+        )}
+
+        <Dropdown
+          className=''
+          label={
+            <div className='flex gap-4'>
+              <UserCircle2 />
+              <span className='text-base'>Account</span>
+            </div>
+          }
+        >
+          <Dropdown.Item>SignIn</Dropdown.Item>
+          <Dropdown.Item>Settings</Dropdown.Item>
+          <Dropdown.Item>Earnings</Dropdown.Item>
+          <Dropdown.Item>Sign out</Dropdown.Item>
+        </Dropdown>
+
         <form>
           <div className='flex'>
             <label
@@ -155,6 +178,13 @@ export default function Nav() {
             <UserCircle2 />
             <span className='font-bold text-base'>Account</span>
           </button> */}
+          <button className='relative flex gap-5'>
+            <ShoppingCart />
+            <div className='rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold'>
+              20
+            </div>
+            <p className='text-lg font-bold'>Cart</p>
+          </button>
 
           <Dropdown
             className=''
@@ -170,13 +200,6 @@ export default function Nav() {
             <Dropdown.Item>Earnings</Dropdown.Item>
             <Dropdown.Item>Sign out</Dropdown.Item>
           </Dropdown>
-          <button className='relative flex gap-5'>
-            <ShoppingCart />
-            <div className='rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-2 font-bold'>
-              20
-            </div>
-            <p className='text-lg font-bold'>Cart</p>
-          </button>
         </div>
       </div>
       {/* <div className='relative flex py-[1rem] border-b border-solid border-gray-300 text-black  px-[10rem]'>

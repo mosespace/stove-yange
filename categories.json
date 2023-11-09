@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Sunglasses",
+    "slug": "owinoug-sunglasses",
+    "description": "A distilled alcoholic beverage made from fermented grain mash.",
+    "image": "/categories/owinoug-sunglasses.jpg",
+    "keywords": ["whiskey", "whisky", "bourbon"]
+  },
+  {
+    "id": 2,
+    "title": "Bags",
+    "slug": "owinoug-bags",
+    "description": "Various distilled alcoholic beverages.",
+    "image": "/categories/owinoug-bags.jpg",
+    "keywords": ["spirits", "alcohol"]
+  },
+  {
+    "id": 3,
+    "title": "Underwear",
+    "slug": "owinoug-underwear",
+    "description": "Elegant sparkling wines, including champagne.",
+    "image": "/categories/owinoug-underwear.jpg",
+    "keywords": ["champagne", "sparkling wine", "bubbly"]
+  },
+  {
+    "id": 4,
+    "title": "Caps",
+    "slug": "owinoug-caps",
+    "description": "An alcoholic beverage made from fermented grapes or other fruits.",
+    "image": "/categories/owinoug-caps.jpg",
+    "keywords": ["wine", "red wine", "white wine"]
+  },
+  {
+    "id": 6,
+    "title": "T-Shirts",
+    "slug": "owinoug-t-shirts",
+    "description": "Fermented alcoholic beverages made from grains or fruits.",
+    "image": "/categories/owinoug-t-shirts.jpg",
+    "keywords": ["beer", "cider", "ale", "lager"]
+  },
+  {
+    "id": 7,
+    "title": "Tracksuits",
+    "slug": "owinoug-tracksuits",
+    "description": "Non-alcoholic beverages used in cocktails and for mixing with spirits.",
+    "image": "/categories/owinoug-tracksuits.jpg",
+    "keywords": ["mixers", "soft drinks", "soda", "tonic water"]
+  },
+  {
+    "id": 8,
+    "title": "Accessories",
+    "slug": "owinoug-accessories",
+    "description": "Specially selected wines for weddings and special occasions.",
+    "image": "/categories/owinoug-accessories.jpg",
+    "keywords": ["wedding wines", "celebration wines"]
+  },
+  {
+    "id": 8,
+    "title": "Hoodies",
+    "slug": "owinoug-hoodies",
+    "description": "Specially selected wines for weddings and special occasions.",
+    "image": "/categories/owinoug-hoodies.jpg",
+    "keywords": ["wedding wines", "celebration wines"]
+  },
+  {
+    "id": 8,
+    "title": "Shorts",
+    "slug": "owinoug-shorts",
+    "description": "Specially selected wines for weddings and special occasions.",
+    "image": "/categories/owinoug-shorts.jpg",
+    "keywords": ["wedding wines", "celebration wines"]
+  },
+  {
+    "id": 8,
+    "title": "Lookbook",
+    "slug": "owinoug-lookbook",
+    "description": "Specially selected wines for weddings and special occasions.",
+    "image": "/categories/owinoug-lookbook.jpg",
+    "keywords": ["wedding wines", "celebration wines"]
+  }
+]

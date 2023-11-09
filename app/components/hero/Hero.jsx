@@ -4,9 +4,9 @@ import DemoImage from "../../../public/stove-grid.jpg";
 
 export default function Hero() {
   return (
-    <div className='bg-white mt-5'>
-      <div className='grid grid-rows-3 grid-flow-col gap-8 h-[420px] overflow-hidden'>
-        <div className='row-span-full bg-teal-400 rounded-md relative isolate flex flex-col overflow-hidden px-8 justify-center w-full cursor-pointer'>
+    <div className='bg-white my-5'>
+      <div className='flex flex-col lg:grid lg:grid-flow-col gap-8 lg:h-[420px] overflow-hidden'>
+        <div className='row-span-full bg-teal-400 rounded-md relative isolate flex flex-col overflow-hidden px-8 justify-center w-full cursor-pointer h-[320px] lg:h-auto'>
           <video
             autoPlay
             loop
@@ -16,7 +16,7 @@ export default function Hero() {
             <source src='vid.mp4' type='video/mp4' />
           </video>
           <div className='absolute inset-0 bg-gradient-to-t from-orange-900/50 via-gray-900/80'></div>
-          <h3 className='z-10 mt-3 text-3xl font-bold text-white leading-snug'>
+          <h3 className='z-10 mt-3 text-2xl lg:text-3xl font-bold text-white leading-snug'>
             Enjoy Up To UGX2500 <br />
             Off Fire Pits
           </h3>
