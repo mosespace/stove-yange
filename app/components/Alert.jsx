@@ -2,13 +2,12 @@ import React from "react";
 
 export default function Alert() {
   return (
-    <div className='text-center bg-[#1A1A1A] text-white py-[8px] w-full'>
-      <span className='underline text-sm cursor-wait px-8'>
+    <div className='flex items-center justify-center bg-black text-white py-[7px] w-full'>
+      <span className='text-xs px-8 cursor-pointer'>
         Always Giving Out Offers:
-        <span className='text-[#ffa500] font-semibold decoration-0 tracking-[.2rem]'>
-          {" "}
+        <span className='text-[#ffa500] font-semibold'>
           Next Offer In 1:45:00
-        </span>{" "}
+        </span>
         (hrs)
       </span>
     </div>
