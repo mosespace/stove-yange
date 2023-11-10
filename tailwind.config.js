@@ -3,6 +3,7 @@ module.exports = {
   darkMode: ["class"],
   content: [
     "./node_modules/flowbite-react/**/*.js",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
     "./app/**/*.{js,jsx}",
@@ -76,5 +77,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("flowbite/plugin")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("flowbite/plugin"),
+    nextui(),
+  ],
 };
