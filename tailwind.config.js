@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+import { nextui } from "@nextui-org/react";
+
 module.exports = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
-    "./node_modules/flowbite-react/**/*.js",
+    "./node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
@@ -15,6 +17,7 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        smallRotate: "740px",
       },
     },
     extend: {
@@ -77,9 +80,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("flowbite/plugin"),
-    nextui(),
-  ],
+  plugins: [nextui([]), require("tailwindcss-animate"), "flowbite/plugin"],
 };
