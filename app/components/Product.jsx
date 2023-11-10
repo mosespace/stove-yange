@@ -1,14 +1,13 @@
 "use client";
 import {
-  AlertCircle,
   ChevronLeft,
   ChevronRight,
   ShoppingCart,
 } from "lucide-react";
 import React from "react";
-import Carousel from "nuka-carousel";
 import Link from "next/link";
 import Image from "next/image";
+import Carousel from "nuka-carousel";
 
 export default function Product({ products, subCategories }) {
   const product = products.filter((item) => item.catId === 1);
