@@ -205,7 +205,13 @@ export default function Nav() {
       </div>
 
       <div className='md:hidden'>
-        <div className='flex justify-between items-center px-8 py-3 bg-white border-b border-solid border-gray-300'>
+        <div
+          className={`${
+            scrolled
+              ? "fixed z-50 shadow-lg top-0 right-0 left-0 flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300"
+              : "flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300"
+          }`}
+        >
           <button onClick={handleToggle} className=''>
             <Menu className='w-8 h-8' />
           </button>
@@ -227,9 +233,9 @@ export default function Nav() {
         </div>
 
         {toggle ? (
-          <div className='py-8 px-8 absolute z-[230] left-0 top-0 bottom-0 right-0 bg-black/80 backdrop-blur-md flex overflow-scroll'>
+          <div className='py-8 px-5 absolute z-[230] left-0 top-0 bottom-0 right-0 bg-black/80 backdrop-blur-md flex overflow-scroll'>
             <div className='relative w-full h-screen text-white  flex flex-col gap-8'>
-              <div className='flex items-center justify-between fixed left-0 right-0 z-10 top-0 py-3 px-8 bg-[#ffa500]'>
+              <div className='flex items-center justify-between fixed left-0 right-0 z-50 top-0 py-3 px-5 bg-black'>
                 <button onClick={handleCloseToggle}>
                   <X className='h-8 w-8' />
                 </button>
