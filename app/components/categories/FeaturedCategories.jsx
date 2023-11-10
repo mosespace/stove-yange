@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function FeaturedCategories({ categories }) {
   return (
-    <section className='my-5 overflow-hidden'>
+    <section className='overflow-hidden'>
       <div className='flex flex-col items-center py-5'>
         <h3 className='text-2xl font-bold'>Featured Categories</h3>
 
