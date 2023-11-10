@@ -208,8 +208,8 @@ export default function Nav() {
         <div
           className={`${
             scrolled
-              ? "fixed z-50 shadow-lg top-0 right-0 left-0 flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300"
-              : "flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300"
+              ? "fixed z-10 shadow-lg top-0 right-0 left-0 flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300"
+              : "flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300 overflow-hidden"
           }`}
         >
           <button onClick={handleToggle} className=''>
@@ -233,61 +233,59 @@ export default function Nav() {
         </div>
 
         {toggle ? (
-          <div className='py-8 px-5 absolute z-[230] left-0 top-0 bottom-0 right-0 bg-black/80 backdrop-blur-md flex overflow-scroll'>
-            <div className='relative w-full h-screen text-white  flex flex-col gap-8'>
-              <div className='flex items-center justify-between fixed left-0 right-0 z-50 top-0 py-3 px-5 bg-black'>
-                <button onClick={handleCloseToggle}>
-                  <X className='h-8 w-8' />
+          <div className='py-8 px-5 fixed z-[230] left-0 top-0 bottom-0 right-0 bg-black/80 backdrop-blur-md flex w-full text-white h-screen flex-col gap-8 overflow-y-scroll overflow-hidden'>
+            <div className='flex items-center justify-between py-3 px-5'>
+              <button onClick={handleCloseToggle}>
+                <X className='h-8 w-8' />
+              </button>
+              <div className='flex gap-4'>
+                <button>
+                  <User className='w-8 h-8' />
                 </button>
-                <div className='flex gap-4'>
-                  <button>
-                    <User className='w-8 h-8' />
-                  </button>
-                  <button>
-                    <Heart className='w-8 h-8' />
-                  </button>
-                </div>
+                <button>
+                  <Heart className='w-8 h-8' />
+                </button>
               </div>
+            </div>
 
-              <div className='mt-14 flex flex-col w-full gap-4'>
-                <div class=' mb-4 flex w-full flex-wrap items-stretch'>
-                  <input
-                    type='search'
-                    class='relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary'
-                    placeholder='Search'
-                    aria-label='Search'
-                    aria-describedby='button-addon1'
-                  />
+            <div className='flex flex-col w-full gap-4'>
+              <div class=' mb-4 flex w-full flex-wrap items-stretch'>
+                <input
+                  type='search'
+                  class='relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary'
+                  placeholder='Search'
+                  aria-label='Search'
+                  aria-describedby='button-addon1'
+                />
 
-                  <button
-                    class='relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg'
-                    type='button'
-                    id='button-addon1'
-                    data-te-ripple-init
-                    data-te-ripple-color='light'
+                <button
+                  class='relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg'
+                  type='button'
+                  id='button-addon1'
+                  data-te-ripple-init
+                  data-te-ripple-color='light'
+                >
+                  <Search />
+                </button>
+              </div>
+              <>
+                {categories.map((category, id) => (
+                  <Link
+                    key={id}
+                    href={`/categories/${category.slug}`}
+                    className='border border-[#ffa500] flex justify-between w-full py-3 rounded-md px-4'
                   >
-                    <Search />
-                  </button>
-                </div>
-                <>
-                  {categories.map((category, id) => (
-                    <Link
-                      key={id}
-                      href={`/categories/${category.slug}`}
-                      className='border border-[#ffa500] flex justify-between w-full py-3 rounded-md px-4'
-                    >
-                      {category.title}
-                      <ChevronRight className='' />
-                    </Link>
-                  ))}
-                </>
-              </div>
+                    {category.title}
+                    <ChevronRight className='' />
+                  </Link>
+                ))}
+              </>
+            </div>
 
-              <div className='pb-8'>
-                <button className='bg-[#0E7490] w-full px-4 py-3 rounded-lg'>
-                  Login or SignUp
-                </button>
-              </div>
+            <div className='pb-8'>
+              <button className='bg-[#0E7490] w-full px-4 py-3 rounded-lg'>
+                Login or SignUp
+              </button>
             </div>
           </div>
         ) : (
