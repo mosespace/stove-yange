@@ -13,6 +13,7 @@ export default function FeaturedCategories({ categories }) {
 
         <Carousel
           wrapAround={false}
+          drag
           renderBottomCenterControls={null}
           renderCenterLeftControls={({ previousSlide }) => (
             <button onClick={previousSlide}>
