@@ -25,14 +25,14 @@ export default function Nav() {
   }, []);
   return (
     <div className='flex flex-col '>
-      <div className='flex py-[.8rem] bg-white border-b border-solid border-gray-300 text-black'>
+      <div className='flex py-[.7rem] bg-white border-b border-solid border-gray-300 text-black'>
         <div className='flex items-center justify-between px-[10rem] w-full'>
           <div>
             <Link
               href='/en-us'
               className='font-bold text-[1.7rem] text-[#ffa500]'
             >
-              Owino<span className='font-light text-black'>Ug</span>
+              Owino<span className='text-[#0E7490]'>Ug</span>
             </Link>
           </div>
           <div className='text-[13px] flex gap-3'>
@@ -60,7 +60,7 @@ export default function Nav() {
       >
         {scrolled ? (
           <Link href='/en-us' className='font-bold text-xl text-[#ffa500]'>
-            Owino<span className='font-light text-black'>Ug</span>
+            Owino<span className='text-[#0E7490]'>Ug</span>
           </Link>
         ) : (
           ""
