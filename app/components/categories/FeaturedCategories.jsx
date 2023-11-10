@@ -16,12 +16,12 @@ export default function FeaturedCategories({ categories }) {
           renderBottomCenterControls={null}
           renderCenterLeftControls={({ previousSlide }) => (
             <button onClick={previousSlide}>
-              <ChevronLeft className='bg-amber-500 rounded-full w-9 h-9 text-black' />
+              <ChevronLeft className='bg-amber-500 rounded-full w-9 h-9 text-white' />
             </button>
           )}
           renderCenterRightControls={({ nextSlide }) => (
             <button onClick={nextSlide}>
-              <ChevronRight className='bg-amber-500 rounded-full w-9 h-9 text-black' />
+              <ChevronRight className='bg-amber-500 rounded-full w-9 h-9 text-white' />
             </button>
           )}
           slidesToShow={6.5}
