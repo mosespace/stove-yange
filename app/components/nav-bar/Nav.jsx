@@ -4,7 +4,7 @@ import Link from "next/link";
 import { categories } from "@/data";
 import { Dropdown } from "flowbite-react";
 import { useEffect, useState } from "react";
-import { ShoppingCart, UserCircle2, Search, ChevronDown } from "lucide-react";
+import { ShoppingCart, UserCircle2, Search } from "lucide-react";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
