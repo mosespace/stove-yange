@@ -1,9 +1,5 @@
 "use client";
-import {
-  ChevronLeft,
-  ChevronRight,
-  ShoppingCart,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,12 +19,11 @@ export default function Product({ products, subCategories }) {
         <Carousel
           autoplay
           wrapAround
-          adaptiveHeight
           adaptiveHeightAnimation
           renderBottomCenterControls={null}
           slidesToShow={4}
           cellSpacing={20}
-          className='my-5'
+          className='py-5'
         >
           {product.slice(0, 12).map((product, id) => (
             <div
@@ -155,7 +150,6 @@ export default function Product({ products, subCategories }) {
       <div className='lg:hidden'>
         <Carousel
           autoplay
-          // adaptiveHeight
           wrapAround={false}
           adaptiveHeightAnimation
           renderBottomCenterControls={null}
