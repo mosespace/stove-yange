@@ -13,8 +13,22 @@ export function Context({ children }) {
     setCart(storedCart);
   }, []);
 
+  const addToCart = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+
+    if (!setCart) {
+      return alert("There is nothing in the cart");
+    }
+  };
+
+  const removeFromCart = (productID) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productID));
+  };
+
   return (
-    <cartContext.Provider value={{ cart }}>{children}</cartContext.Provider>
+    <cartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+      {children}
+    </cartContext.Provider>
   );
 }
 
