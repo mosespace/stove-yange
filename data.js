@@ -36,6 +36,15 @@ const categories = [
     keywords: ["wine", "red wine", "white wine"],
   },
   {
+    id: 5,
+    title: "Trends",
+    slug: "owinoug-caps",
+    description:
+      "Top off your look with our stylish caps. Elevate your style while staying cool and protected.",
+    image: "/categories/owinoug-caps.jpg",
+    keywords: ["wine", "red wine", "white wine"],
+  },
+  {
     id: 6,
     title: "T-Shirts",
     slug: "owinoug-t-shirts",
@@ -63,7 +72,7 @@ const categories = [
     keywords: ["wedding wines", "celebration wines"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Hoodies",
     slug: "owinoug-hoodies",
     description:
@@ -72,7 +81,7 @@ const categories = [
     keywords: ["wedding wines", "celebration wines"],
   },
   {
-    id: 8,
+    id: 10,
     title: "Shorts",
     slug: "owinoug-shorts",
     description:
@@ -81,7 +90,7 @@ const categories = [
     keywords: ["wedding wines", "celebration wines"],
   },
   {
-    id: 8,
+    id: 11,
     title: "Lookbook",
     slug: "owinoug-lookbook",
     description:
@@ -196,7 +205,7 @@ const products = [
     images: ["/tshirts/owinoug-tshirt-1.jpg", "/tshirts/owinoug-tshirt-2.jpg"],
   },
   {
-    id: 1,
+    id: 2,
     title: "OwinoUg White Signature T-Shirt",
     image: "/tshirts/owinoug-tshirt-4.jpg",
     slug: "owinoug-white-signature-tshirt",
@@ -210,7 +219,7 @@ const products = [
     images: ["/tshirts/owinoug-tshirt-4.jpg"],
   },
   {
-    id: 1,
+    id: 3,
     title: "OwinoUg White Crested Crane Motif T-Shirt",
     image: "/tshirts/owinoug-tshirt-5.jpg",
     slug: "owinoug-white-crested-crane-tshirt",
@@ -224,7 +233,7 @@ const products = [
     images: ["/tshirts/owinoug-tshirt-5.jpg", "/tshirts/owinoug-tshirt-6.jpg"],
   },
   {
-    id: 1,
+    id: 4,
     title: "OwinoUg White Barcode T-Shirt",
     image: "/tshirts/owinoug-tshirt-7.jpg",
     slug: "owinoug-white-barcode-tshirt",
@@ -238,7 +247,7 @@ const products = [
     images: ["/tshirts/owinoug-tshirt-7.jpg", "/tshirts/owinoug-tshirt-8.jpg"],
   },
   {
-    id: 1,
+    id: 5,
     title: "OwinoUg Mustard Barcode T-Shirt",
     image: "/tshirts/owinoug-tshirt-9.jpg",
     slug: "owinoug-mustard-barcode-tshirt",
@@ -252,7 +261,7 @@ const products = [
     images: ["/tshirts/owinoug-tshirt-9.jpg", "/tshirts/owinoug-tshirt-10.jpg"],
   },
   {
-    id: 1,
+    id: 6,
     title: "OwinoUg Green Barcode T-Shirt",
     image: "/tshirts/owinoug-tshirt-11.jpg",
     slug: "owinoug-green-barcode-tshirt",
@@ -269,7 +278,7 @@ const products = [
     ],
   },
   {
-    id: 1,
+    id: 7,
     title: "OwinoUg White Abracadabra T-Shirt",
     image: "/tshirts/owinoug-tshirt-13.jpg",
     slug: "owinoug-white-abracadabra-tshirt",
@@ -286,7 +295,7 @@ const products = [
     ],
   },
   {
-    id: 1,
+    id: 8,
     title: "OwinoUg Black Abracadabra T-Shirt",
     image: "/tshirts/owinoug-tshirt-15.jpg",
     slug: "owinoug-black-abracadabra-tshirt",
@@ -303,7 +312,7 @@ const products = [
     ],
   },
   {
-    id: 1,
+    id: 9,
     title: "OwinoUg Orange Abracadabra T-Shirt",
     image: "/tshirts/owinoug-tshirt-17.jpg",
     slug: "owinoug-orange-abracadabra-tshirt",
@@ -315,6 +324,22 @@ const products = [
     originalPrice: "111,129.00",
     subCatName: "men-tshirts",
     images: ["/tshirts/owinoug-tshirt-17.jpg"],
+  },
+
+  //SHorts-TSHIRTS
+  {
+    id: 10,
+    title: "OwinoUg Abracadabra Cappuccino T-Shirt",
+    image: "/tshirts/owinoug-tshirt-1.jpg",
+    slug: "owinoug-abracadabra-cappuccino",
+    subCatId: 2,
+    catId: 4,
+    description: "Classic warmth in owinoug cappuccino.",
+    hasFreeDelivery: true,
+    currentPrice: "100,016.10",
+    originalPrice: "111,129.00",
+    subCatName: "pants",
+    images: ["/tshirts/owinoug-tshirt-1.jpg", "/tshirts/owinoug-tshirt-2.jpg"],
   },
 ];
 
