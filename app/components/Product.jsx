@@ -4,10 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import Carousel from "nuka-carousel";
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
+import { useCart } from "../context/context";
 
 export default function Product({ products, categories, subCategories }) {
   // const id = categories.id;
   const product = products.filter((prod) => prod.subCatName == "men-tshirts");
+
+  const { addToCart } = useCart();
 
   return (
     <div className='flex flex-col py-5'>
@@ -134,13 +137,13 @@ export default function Product({ products, categories, subCategories }) {
                   )}
                 </div>
 
-                <Link
-                  href='#'
+                <button
+                  onClick={() => addToCart(product)}
                   className='flex items-center justify-center gap-3 rounded-md bg-[#0E7490] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300'
                 >
                   <ShoppingCart />
                   Add to cart
-                </Link>
+                </button>
               </div>
             </div>
           ))}
