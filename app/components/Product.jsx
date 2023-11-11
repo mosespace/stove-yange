@@ -32,7 +32,7 @@ export default function Product({ products, subCategories }) {
             >
               <Link
                 className='relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl'
-                href='#'
+                href={`owinoug-product/${product.slug}`}
               >
                 <Image
                   className='object-cover w-full h-full'
@@ -46,7 +46,7 @@ export default function Product({ products, subCategories }) {
                 </div>
               </Link>
               <div className='mt-4 flex flex-col gap-2 px-5 pb-5'>
-                <Link href='#'>
+                <Link href={`owinoug-product/${product.slug}`}>
                   <h5 className='text-[1.300rem] font-bold tracking-tight text-slate-900'>
                     {product.title}
                   </h5>
@@ -150,6 +150,7 @@ export default function Product({ products, subCategories }) {
       <div className='lg:hidden'>
         <Carousel
           autoplay
+          autoplayReverse={true}
           wrapAround={false}
           adaptiveHeightAnimation
           renderBottomCenterControls={null}
@@ -191,7 +192,7 @@ export default function Product({ products, subCategories }) {
               <div className='mt-4 flex flex-col gap-2 px-5 pb-5'>
                 <Link href='#'>
                   <h5 className='text-[1.300rem] font-bold tracking-tight text-slate-900'>
-                    {product.title}
+                    {product.title.substring(0, 22)}...
                   </h5>
                 </Link>
 
