@@ -1,9 +1,9 @@
 "use client";
-import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Carousel from "nuka-carousel";
+import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 
 export default function Product({ products, subCategories }) {
   const product = products.filter((item) => item.catId === 1);
