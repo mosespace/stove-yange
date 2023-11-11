@@ -88,7 +88,7 @@ export default function Nav() {
           <form>
             <div className='flex'>
               <label
-                for='search-dropdown'
+                htmlFor='search-dropdown'
                 className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'
               >
                 Your Email
