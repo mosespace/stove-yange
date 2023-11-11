@@ -5,8 +5,9 @@ import Image from "next/image";
 import Carousel from "nuka-carousel";
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
 
-export default function Product({ products, subCategories }) {
-  const product = products.filter((item) => item.catId === 1);
+export default function Product({ products, categories, subCategories }) {
+  // const id = categories.id;
+  const product = products.filter((prod) => prod.subCatName == "men-tshirts");
 
   return (
     <div className='flex flex-col py-5'>
@@ -25,7 +26,7 @@ export default function Product({ products, subCategories }) {
           cellSpacing={20}
           className='py-5'
         >
-          {product.slice(0, 12).map((product, id) => (
+          {product?.slice(0, 12).map((product, id) => (
             <div
               className='relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'
               key={id}
@@ -169,7 +170,7 @@ export default function Product({ products, subCategories }) {
           cellSpacing={20}
           className='py-5'
         >
-          {product.slice(0, 7).map((product, id) => (
+          {product?.slice(0, 7).map((product, id) => (
             <div
               className='relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md'
               key={id}
