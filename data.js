@@ -94,7 +94,7 @@ const subCategories = [
   //These are the T-shirts sub-categories. For any changes you would like to make, change here
   {
     id: 1,
-    catId: 1,
+    catId: 6,
     title: "Man",
     path: "/men-tshirts",
     images: [
@@ -104,7 +104,7 @@ const subCategories = [
   },
   {
     id: 2,
-    catId: 1,
+    catId: 6,
     title: "Women",
     path: "/women-tshirts",
     images: [
@@ -116,7 +116,7 @@ const subCategories = [
   //These are the Underwear sub-categories. For any changes you would like to make, change here
   {
     id: 3,
-    catId: 2,
+    catId: 3,
     title: "Man",
     path: "/men-underwear",
     images: [
@@ -126,7 +126,7 @@ const subCategories = [
   },
   {
     id: 4,
-    catId: 2,
+    catId: 3,
     title: "Women",
     path: "/women-underwear",
     images: [
@@ -136,10 +136,9 @@ const subCategories = [
   },
 
   //These are the Tracksuits sub-categories. For any changes you would like to make, change here
-  //Phones
   {
     id: 5,
-    catId: 3,
+    catId: 7,
     title: "Man",
     path: "/men-tracksuits",
     images: [
@@ -158,11 +157,10 @@ const subCategories = [
     ],
   },
 
-  //These are the Shots sub-categories. For any changes you would like to make, change here
-  //Phones
+  //These are the Shorts sub-categories. For any changes you would like to make, change here
   {
     id: 7,
-    catId: 3,
+    catId: 8,
     title: "Man",
     path: "/men-shorts",
     images: [
@@ -189,7 +187,7 @@ const products = [
     image: "/tshirts/owinoug-tshirt-1.jpg",
     slug: "owinoug-abracadabra-cappuccino",
     subCatId: 1,
-    catId: 1,
+    catId: 6,
     description: "Classic warmth in owinoug cappuccino.",
     hasFreeDelivery: true,
     currentPrice: "100,016.10",
@@ -203,7 +201,7 @@ const products = [
     image: "/tshirts/owinoug-tshirt-4.jpg",
     slug: "owinoug-white-signature-tshirt",
     subCatId: 1,
-    catId: 1,
+    catId: 6,
     description: "Classic warmth in owinoug white signature.",
     hasFreeDelivery: true,
     currentPrice: "100,016.10",
@@ -217,7 +215,7 @@ const products = [
     image: "/tshirts/owinoug-tshirt-5.jpg",
     slug: "owinoug-white-crested-crane-tshirt",
     subCatId: 1,
-    catId: 1,
+    catId: 6,
     description: "Classic warmth in owinoug white crested crane.",
     hasFreeDelivery: true,
     currentPrice: "100,016.10",
@@ -231,7 +229,7 @@ const products = [
     image: "/tshirts/owinoug-tshirt-7.jpg",
     slug: "owinoug-white-barcode-tshirt",
     subCatId: 1,
-    catId: 1,
+    catId: 6,
     description: "Classic warmth in owinoug white barcode tshirt.",
     hasFreeDelivery: true,
     currentPrice: "85,198.90",
@@ -244,7 +242,7 @@ const products = [
     title: "OwinoUg Mustard Barcode T-Shirt",
     image: "/tshirts/owinoug-tshirt-9.jpg",
     slug: "owinoug-mustard-barcode-tshirt",
-    subCatId: 1,
+    subCatId: 6,
     catId: 1,
     description: "Classic warmth in owinoug mustard barcode tshirt.",
     hasFreeDelivery: true,
@@ -259,7 +257,7 @@ const products = [
     image: "/tshirts/owinoug-tshirt-11.jpg",
     slug: "owinoug-green-barcode-tshirt",
     subCatId: 1,
-    catId: 1,
+    catId: 6,
     description: "Classic warmth in owinoug green barcode tshirt.",
     hasFreeDelivery: true,
     currentPrice: "85,198.90",
@@ -276,7 +274,7 @@ const products = [
     image: "/tshirts/owinoug-tshirt-13.jpg",
     slug: "owinoug-white-abracadabra-tshirt",
     subCatId: 1,
-    catId: 1,
+    catId: 6,
     description: "Classic warmth in owinoug white abracadabra tshirt.",
     hasFreeDelivery: true,
     currentPrice: "100,016.10",
@@ -293,7 +291,7 @@ const products = [
     image: "/tshirts/owinoug-tshirt-15.jpg",
     slug: "owinoug-black-abracadabra-tshirt",
     subCatId: 1,
-    catId: 1,
+    catId: 6,
     description: "Classic warmth in owinoug black abracadabra tshirt.",
     hasFreeDelivery: true,
     currentPrice: "100,016.10",
@@ -310,7 +308,7 @@ const products = [
     image: "/tshirts/owinoug-tshirt-17.jpg",
     slug: "owinoug-orange-abracadabra-tshirt",
     subCatId: 1,
-    catId: 1,
+    catId: 6,
     description: "Classic warmth in owinoug orange abracadabra tshirt.",
     hasFreeDelivery: true,
     currentPrice: "100,016.10",
