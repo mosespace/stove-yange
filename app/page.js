@@ -11,7 +11,11 @@ export default function Home() {
       <Hero />
       <div className='flex flex-col px-5'>
         <FeaturedCategories categories={categories} />
-        <Product products={products} subCategories={subCategories} />
+        <Product
+          products={products}
+          categories={categories}
+          subCategories={subCategories}
+        />
         <Shop />
       </div>
     </main>
