@@ -103,7 +103,7 @@ const subCategories = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     catId: 1,
     title: "Women",
     path: "/women-tshirts",
@@ -115,7 +115,7 @@ const subCategories = [
 
   //These are the Underwear sub-categories. For any changes you would like to make, change here
   {
-    id: 1,
+    id: 3,
     catId: 2,
     title: "Man",
     path: "/men-underwear",
@@ -125,7 +125,7 @@ const subCategories = [
     ],
   },
   {
-    id: 1,
+    id: 4,
     catId: 2,
     title: "Women",
     path: "/women-underwear",
@@ -138,7 +138,7 @@ const subCategories = [
   //These are the Tracksuits sub-categories. For any changes you would like to make, change here
   //Phones
   {
-    id: 1,
+    id: 5,
     catId: 3,
     title: "Man",
     path: "/men-tracksuits",
@@ -148,7 +148,7 @@ const subCategories = [
     ],
   },
   {
-    id: 1,
+    id: 6,
     catId: 3,
     title: "Women",
     path: "/women-tracksuits",
@@ -161,7 +161,7 @@ const subCategories = [
   //These are the Shots sub-categories. For any changes you would like to make, change here
   //Phones
   {
-    id: 1,
+    id: 7,
     catId: 3,
     title: "Man",
     path: "/men-shorts",
@@ -171,7 +171,7 @@ const subCategories = [
     ],
   },
   {
-    id: 1,
+    id: 8,
     catId: 3,
     title: "Women",
     path: "/women-shorts",
