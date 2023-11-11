@@ -3,6 +3,7 @@ import { Providers } from "./providers";
 import Alert from "./components/Alert";
 import { Poppins } from "next/font/google";
 import Nav from "./components/nav-bar/Nav";
+import { Context } from "./context/context";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -18,10 +19,12 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <Providers>
-          <Alert />
-          <Nav />
-          {children}
-          <script src='../path/to/flowbite/dist/flowbite.min.js'></script>
+          <Context>
+            <Alert />
+            <Nav />
+            {children}
+            <script src='../path/to/flowbite/dist/flowbite.min.js'></script>
+          </Context>
         </Providers>
       </body>
     </html>
