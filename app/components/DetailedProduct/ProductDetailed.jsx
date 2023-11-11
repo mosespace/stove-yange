@@ -56,7 +56,7 @@ export default function ProductDetailed({ product, category, subCategory }) {
           </ol>
         </nav>
 
-        <div className='lg:col-gap-12 xl:col-gap-16 mt-8 grid grid-cols-1 gap-12 lg:mt-12 lg:grid-cols-5 lg:gap-16'>
+        <div className='lg:col-gap-8 xl:col-gap-16 mt-8 grid  grid-cols-1 gap-12 lg:mt-12 lg:grid-cols-5 lg:gap-16'>
           <div className='lg:col-span-3 lg:row-end-1'>
             <div className='lg:flex lg:items-start'>
               <div className='lg:order-2 lg:ml-5'>
@@ -64,7 +64,7 @@ export default function ProductDetailed({ product, category, subCategory }) {
                   <Image
                     className='h-full w-full max-w-full object-cover'
                     src={DemoImg}
-                    alt=''
+                    alt={product.title}
                   />
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function ProductDetailed({ product, category, subCategory }) {
                     <Image
                       className='h-full w-full object-cover'
                       src={DemoImg2}
-                      alt=''
+                      alt={product.title}
                     />
                   </button>
                   <button
@@ -88,7 +88,28 @@ export default function ProductDetailed({ product, category, subCategory }) {
                     <Image
                       className='h-full w-full object-cover'
                       src={DemoImg}
-                      alt=''
+                      alt={product.title}
+                    />
+                  </button>
+
+                  <button
+                    type='button'
+                    className='flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center'
+                  >
+                    <Image
+                      className='h-full w-full object-cover'
+                      src={DemoImg2}
+                      alt={product.title}
+                    />
+                  </button>
+                  <button
+                    type='button'
+                    className='flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center'
+                  >
+                    <Image
+                      className='h-full w-full object-cover'
+                      src={DemoImg}
+                      alt={product.title}
                     />
                   </button>
                   <button
@@ -98,7 +119,17 @@ export default function ProductDetailed({ product, category, subCategory }) {
                     <Image
                       className='h-full w-full object-cover'
                       src={DemoImg2}
-                      alt=''
+                      alt={product.title}
+                    />
+                  </button>
+                  <button
+                    type='button'
+                    className='flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center'
+                  >
+                    <Image
+                      className='h-full w-full object-cover'
+                      src={DemoImg}
+                      alt={product.title}
                     />
                   </button>
                 </div>
@@ -219,9 +250,7 @@ export default function ProductDetailed({ product, category, subCategory }) {
               </label>
             </div>
 
-            <h2 className='mt-8 text-base text-gray-900'>
-              Choose subscription
-            </h2>
+            <h2 className='mt-8 text-base text-gray-900'>Choose size</h2>
             <div className='mt-3 flex select-none flex-wrap items-center gap-1'>
               <label className=''>
                 <input
