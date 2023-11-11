@@ -183,7 +183,8 @@ export default function Nav() {
           <div className='flex items-center md:justify-between lg:justify-normal md:w-full lg:w-auto gap-8'>
             <button className='relative flex gap-5'>
               <ShoppingCart />
-              <div
+              <Link
+                href='/owinoug-cart'
                 className={`${
                   cart.length < 10
                     ? "rounded-full bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
@@ -191,7 +192,7 @@ export default function Nav() {
                 }`}
               >
                 {cart.length}
-              </div>
+              </Link>
               <p className='text-lg font-bold'>Cart</p>
             </button>
 
