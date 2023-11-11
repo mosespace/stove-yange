@@ -95,7 +95,7 @@ const categories = [
     slug: "owinoug-lookbook",
     description:
       "Discover curated looks for every vibe. Explore our lookbook for style inspiration that speaks to you.",
-    image: "/categories/owinoug-lookbook.jpg",
+    image: "/categories/owinoug-lookbook-03.jpg",
     keywords: ["wedding wines", "celebration wines"],
   },
 ];
