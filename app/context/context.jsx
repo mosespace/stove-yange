@@ -16,6 +16,9 @@ export function Context({ children }) {
   const addToCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
 
+    const updatedCart = [...cart, product];
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+
     if (!setCart) {
       return alert("There is nothing in the cart");
     }
