@@ -281,13 +281,13 @@ export default function Product({ products, categories, subCategories }) {
                   )}
                 </div>
 
-                <Link
-                  href='#'
+                <button
+                  onClick={() => addToCart(product)}
                   className='flex items-center justify-center gap-3 rounded-md bg-[#0E7490] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300'
                 >
                   <ShoppingCart />
                   Add to cart
-                </Link>
+                </button>
               </div>
             </div>
           ))}
