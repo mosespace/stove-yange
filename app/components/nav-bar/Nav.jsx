@@ -235,9 +235,16 @@ export default function Nav() {
           <div className='relative flex items-center md:justify-between md:w-full gap-8'>
             <button className='relative flex gap-5'>
               <ShoppingCart className='w-8 h-8' />
-              <div className='rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-3 font-bold'>
-                20
-              </div>
+              <Link
+                href='/owinoug-cart'
+                className={`${
+                  cart.length < 10
+                    ? "rounded-full bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    : "rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                }`}
+              >
+                {cart.length}
+              </Link>
             </button>
           </div>
         </div>
