@@ -186,8 +186,8 @@ export default function Nav() {
               <div
                 className={`${
                   cart.length < 10
-                    ? "rounded-full bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                    : "rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    ? "rounded-full border-3 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    : "rounded-full border-3 border-white bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
                 }`}
               >
                 {cart.length}
@@ -238,8 +238,8 @@ export default function Nav() {
                 href='/owinoug-cart'
                 className={`${
                   cart.length < 10
-                    ? "rounded-full bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                    : "rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    ? "rounded-full border-4 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    : "rounded-full border-4 border-white bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
                 }`}
               >
                 {cart.length}
