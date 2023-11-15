@@ -4,6 +4,8 @@ import Alert from "./components/Alert";
 import { Poppins } from "next/font/google";
 import Nav from "./components/nav-bar/Nav";
 import { Context } from "./context/context";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <Providers>
+          <ToastContainer />
           <Context>
             <Alert />
             <Nav />

@@ -181,20 +181,19 @@ export default function Nav() {
           </form>
 
           <div className='flex items-center md:justify-between lg:justify-normal md:w-full lg:w-auto gap-8'>
-            <button className='relative flex gap-5'>
+            <Link href='/owinoug-cart' className='relative flex gap-5'>
               <ShoppingCart />
-              <Link
-                href='/owinoug-cart'
+              <div
                 className={`${
                   cart.length < 10
-                    ? "rounded-full bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                    : "rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    ? "rounded-full border-3 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    : "rounded-full border-3 border-white bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
                 }`}
               >
                 {cart.length}
-              </Link>
+              </div>
               <p className='text-lg font-bold'>Cart</p>
-            </button>
+            </Link>
 
             <Dropdown
               className=''
@@ -239,8 +238,8 @@ export default function Nav() {
                 href='/owinoug-cart'
                 className={`${
                   cart.length < 10
-                    ? "rounded-full bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                    : "rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    ? "rounded-full border-4 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    : "rounded-full border-4 border-white bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
                 }`}
               >
                 {cart.length}
