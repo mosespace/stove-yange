@@ -50,10 +50,7 @@ export default function Nav() {
         <div className='flex py-[.7rem] bg-white border-b border-solid border-gray-300 text-black'>
           <div className='flex items-center justify-between px-[10rem] w-full md:px-[2rem] md:flex-wrap'>
             <div>
-              <Link
-                href='/en-us'
-                className='font-bold text-[1.7rem] text-[#ffa500]'
-              >
+              <Link href='/' className='font-bold text-[1.7rem] text-[#ffa500]'>
                 Owino<span className='text-[#0E7490]'>Ug</span>
               </Link>
             </div>
@@ -81,7 +78,7 @@ export default function Nav() {
           }`}
         >
           {scrolled ? (
-            <Link href='/en-us' className='font-bold text-xl text-[#ffa500]'>
+            <Link href='/' className='font-bold text-xl text-[#ffa500]'>
               Owino<span className='text-[#0E7490]'>Ug</span>
             </Link>
           ) : (
@@ -225,10 +222,7 @@ export default function Nav() {
             <Menu className='w-8 h-8' />
           </button>
 
-          <Link
-            href='/en-us'
-            className='font-bold text-[1.5rem] text-[#ffa500]'
-          >
+          <Link href='/' className='font-bold text-[1.5rem] text-[#ffa500]'>
             Owino<span className='text-[#0E7490]'>Ug</span>
           </Link>
           <div className='relative flex items-center md:justify-between md:w-full gap-8'>
@@ -236,11 +230,7 @@ export default function Nav() {
               <ShoppingCart className='w-8 h-8' />
               <Link
                 href='/owinoug-cart'
-                className={`${
-                  cart.length < 10
-                    ? "rounded-full border-4 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                    : "rounded-full border-4 border-white bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                }`}
+                className='rounded-full border-4 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold'
               >
                 {cart.length}
               </Link>
