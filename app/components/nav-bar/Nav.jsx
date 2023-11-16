@@ -183,8 +183,8 @@ export default function Nav() {
               <div
                 className={`${
                   cart.length < 10
-                    ? "rounded-full border-3 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                    : "rounded-full border-3 border-white bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    ? "rounded-full bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    : "rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
                 }`}
               >
                 {cart.length}
@@ -214,8 +214,8 @@ export default function Nav() {
         <div
           className={`${
             scrolled
-              ? "fixed z-10 shadow-lg top-0 right-0 left-0 flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300"
-              : "flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300 overflow-hidden"
+              ? "fixed z-10 shadow-lg top-0 right-0 left-0 flex justify-between items-center px-5 py-3 bg-white border-b"
+              : "flex justify-between items-center px-5 py-3 bg-white border-b overflow-hidden"
           }`}
         >
           <button onClick={handleToggle} className=''>
