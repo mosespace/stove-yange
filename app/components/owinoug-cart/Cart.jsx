@@ -79,7 +79,12 @@ function Cart() {
               </div>
             ))}
           </div>
-          <div className='pt-20 px-5'>
+          <div className='lg:pt-10 flex flex-col gap-3 pt-20 px-5'>
+            <div className='flex justify-between font-bold px-5'>
+              <h3 className=''>Total Price</h3>
+              <span>UGX {formattedTotalPrice}</span>
+            </div>
+
             <Link href={address} target='_blank' rel='noopener noreferrer'>
               <Button title='Order Now' />
             </Link>

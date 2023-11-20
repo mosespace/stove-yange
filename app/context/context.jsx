@@ -6,6 +6,10 @@ import { toast } from "react-toastify";
 export const cartContext = createContext();
 
 export function Context({ children }) {
+  const [search, setSearch] = useState("");
+
+  const [handleSearch, setHandleSearch] = useState([]);
+
   const [cart, setCart] = useState([]);
 
   // Initializing cart items from local storage on first load
@@ -58,7 +62,17 @@ export function Context({ children }) {
   };
 
   return (
-    <cartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <cartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+        setSearch,
+        search,
+        handleSearch,
+        setHandleSearch,
+      }}
+    >
       {children}
     </cartContext.Provider>
   );

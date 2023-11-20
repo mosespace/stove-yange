@@ -294,7 +294,7 @@ export default function ProductDetailed({ product, category, subCategory }) {
             <div className='mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0'>
               <div className='flex items-end'>
                 <h1 className='text-3xl font-bold'>
-                  UGX {product.currentPrice.substring(0, 7)}
+                  UGX {product.currentPrice}
                 </h1>
               </div>
 

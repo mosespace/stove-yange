@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { categories } from "@/data";
 import { Dropdown } from "flowbite-react";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   ShoppingCart,
@@ -14,14 +15,25 @@ import {
   X,
   ChevronRight,
 } from "lucide-react";
+import { products } from "@/data";
 import { useCart } from "@/app/context/context";
+import { useForm } from "react-hook-form";
 
 export default function Nav() {
   const { cart } = useCart();
 
+  const { handleSubmit, register, reset } = useForm();
+
+  const [searchQuery, setSearchQuery] = useState("");
+
   const [scrolled, setScrolled] = useState(false);
 
   const [toggle, setToggle] = useState(false);
+
+  const { setHandleSearch } = useCart();
+  const { setSearch } = useCart();
+  const router = useRouter();
+  setSearch(searchQuery);
 
   function handleToggle() {
     setToggle(true);
@@ -29,6 +41,18 @@ export default function Nav() {
   function handleCloseToggle() {
     setToggle(false);
   }
+
+  const handleSearches = (e) => {
+    e.preventDefault();
+    const filteredData = products.filter((product) =>
+      product.title.toLowerCase().includes(searchQuery.toLowerCase().trim())
+    );
+
+    setHandleSearch(filteredData);
+
+    router.push("/owino-search");
+    reset();
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,7 +109,7 @@ export default function Nav() {
             ""
           )}
 
-          <form>
+          <form onSubmit={handleSearches}>
             <div className='flex'>
               <label
                 htmlFor='search-dropdown'
@@ -161,10 +185,12 @@ export default function Nav() {
               <div className='relative w-full'>
                 <input
                   type='search'
-                  id='search-dropdown'
+                  id='searchQuery'
                   className='block p-2.5 w-[450px] z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 dark:bg-gray-700 dark:border-l-gray-700 outline-0 dark:border-gray-600 dark:placeholder-gray-400 focus:outline-none dark:text-white'
                   placeholder='Search products brands and categories...'
                   required
+                  {...register("searchQuery")}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <button
                   type='submit'
