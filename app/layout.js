@@ -6,6 +6,7 @@ import Nav from "./components/nav-bar/Nav";
 import { Context } from "./context/context";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/footer/Footer";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
             <Alert />
             <Nav />
             {children}
+            <Footer />
             <script src='../path/to/flowbite/dist/flowbite.min.js'></script>
           </Context>
         </Providers>
