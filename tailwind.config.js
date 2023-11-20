@@ -80,5 +80,10 @@ module.exports = {
       },
     },
   },
-  plugins: [nextui([]), require("tailwindcss-animate"), "flowbite/plugin"],
+  plugins: [
+    nextui([]),
+    require("tailwindcss-animate"),
+    "flowbite/plugin",
+    "@tailwindcss/forms",
+  ],
 };
