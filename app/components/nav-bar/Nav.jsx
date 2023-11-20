@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { categories } from "@/data";
 import { Dropdown } from "flowbite-react";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   ShoppingCart,
@@ -14,14 +15,25 @@ import {
   X,
   ChevronRight,
 } from "lucide-react";
+import { products } from "@/data";
 import { useCart } from "@/app/context/context";
+import { useForm } from "react-hook-form";
 
 export default function Nav() {
   const { cart } = useCart();
 
+  const { handleSubmit, register, reset } = useForm();
+
+  const [searchQuery, setSearchQuery] = useState("");
+
   const [scrolled, setScrolled] = useState(false);
 
   const [toggle, setToggle] = useState(false);
+
+  const { setHandleSearch } = useCart();
+  const { setSearch } = useCart();
+  const router = useRouter();
+  setSearch(searchQuery);
 
   function handleToggle() {
     setToggle(true);
@@ -29,6 +41,18 @@ export default function Nav() {
   function handleCloseToggle() {
     setToggle(false);
   }
+
+  const handleSearches = (e) => {
+    e.preventDefault();
+    const filteredData = products.filter((product) =>
+      product.title.toLowerCase().includes(searchQuery.toLowerCase().trim())
+    );
+
+    setHandleSearch(filteredData);
+
+    router.push("/owino-search");
+    reset();
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,10 +74,7 @@ export default function Nav() {
         <div className='flex py-[.7rem] bg-white border-b border-solid border-gray-300 text-black'>
           <div className='flex items-center justify-between px-[10rem] w-full md:px-[2rem] md:flex-wrap'>
             <div>
-              <Link
-                href='/en-us'
-                className='font-bold text-[1.7rem] text-[#ffa500]'
-              >
+              <Link href='/' className='font-bold text-[1.7rem] text-[#ffa500]'>
                 Owino<span className='text-[#0E7490]'>Ug</span>
               </Link>
             </div>
@@ -81,14 +102,14 @@ export default function Nav() {
           }`}
         >
           {scrolled ? (
-            <Link href='/en-us' className='font-bold text-xl text-[#ffa500]'>
+            <Link href='/' className='font-bold text-xl text-[#ffa500]'>
               Owino<span className='text-[#0E7490]'>Ug</span>
             </Link>
           ) : (
             ""
           )}
 
-          <form>
+          <form onSubmit={handleSearches}>
             <div className='flex'>
               <label
                 htmlFor='search-dropdown'
@@ -164,10 +185,12 @@ export default function Nav() {
               <div className='relative w-full'>
                 <input
                   type='search'
-                  id='search-dropdown'
+                  id='searchQuery'
                   className='block p-2.5 w-[450px] z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 dark:bg-gray-700 dark:border-l-gray-700 outline-0 dark:border-gray-600 dark:placeholder-gray-400 focus:outline-none dark:text-white'
                   placeholder='Search products brands and categories...'
                   required
+                  {...register("searchQuery")}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <button
                   type='submit'
@@ -186,8 +209,8 @@ export default function Nav() {
               <div
                 className={`${
                   cart.length < 10
-                    ? "rounded-full border-3 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                    : "rounded-full border-3 border-white bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    ? "rounded-full bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
+                    : "rounded-full bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
                 }`}
               >
                 {cart.length}
@@ -217,18 +240,15 @@ export default function Nav() {
         <div
           className={`${
             scrolled
-              ? "fixed z-10 shadow-lg top-0 right-0 left-0 flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300"
-              : "flex justify-between items-center px-5 py-3 bg-white border-b border-solid border-gray-300 overflow-hidden"
+              ? "fixed z-10 shadow-lg top-0 right-0 left-0 flex justify-between items-center px-5 py-3 bg-white border-b"
+              : "flex justify-between items-center px-5 py-3 bg-white border-b overflow-hidden"
           }`}
         >
           <button onClick={handleToggle} className=''>
             <Menu className='w-8 h-8' />
           </button>
 
-          <Link
-            href='/en-us'
-            className='font-bold text-[1.5rem] text-[#ffa500]'
-          >
+          <Link href='/' className='font-bold text-[1.5rem] text-[#ffa500]'>
             Owino<span className='text-[#0E7490]'>Ug</span>
           </Link>
           <div className='relative flex items-center md:justify-between md:w-full gap-8'>
@@ -236,11 +256,7 @@ export default function Nav() {
               <ShoppingCart className='w-8 h-8' />
               <Link
                 href='/owinoug-cart'
-                className={`${
-                  cart.length < 10
-                    ? "rounded-full border-4 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                    : "rounded-full border-4 border-white bg-[#ffa500] p-1 text-xs absolute z-[230] left-4 bottom-4 font-bold"
-                }`}
+                className='rounded-full border-4 border-white bg-[#ffa500] py-1 px-2 text-xs absolute z-[230] left-4 bottom-4 font-bold'
               >
                 {cart.length}
               </Link>
