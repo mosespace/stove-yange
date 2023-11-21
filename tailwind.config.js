@@ -77,8 +77,14 @@ module.exports = {
       },
       backgroundImage: {
         stove: "url(/stove-grid.jpg)",
+        wave: "url(/wave.svg)",
       },
     },
   },
-  plugins: [nextui([]), require("tailwindcss-animate"), "flowbite/plugin"],
+  plugins: [
+    nextui([]),
+    require("tailwindcss-animate"),
+    "flowbite/plugin",
+    "@tailwindcss/forms",
+  ],
 };

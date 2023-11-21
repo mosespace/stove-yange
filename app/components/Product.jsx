@@ -13,7 +13,7 @@ export default function Product({ products, categories, subCategories }) {
   const { addToCart } = useCart();
 
   return (
-    <div className='flex flex-col py-5'>
+    <div className='flex flex-col py-5  px-5 lg:px-20'>
       <h3 className='text-2xl font-bold text-center'>
         Trending & Latest Today 💥🚀
       </h3>

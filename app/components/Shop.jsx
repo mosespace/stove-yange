@@ -107,7 +107,7 @@ import BurnerTwo from "../../public/burner-02.jpg";
 
 export default function Shop() {
   return (
-    <div className='flex justify-center items-center my-5'>
+    <div className='flex justify-center items-center my-5  px-5 lg:px-20'>
       <div className='md:w-auto grid lg:grid-cols-3 grid-cols-1 lg:gap-8 gap-6'>
         <div className='relative group'>
           <Image
