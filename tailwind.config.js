@@ -77,6 +77,7 @@ module.exports = {
       },
       backgroundImage: {
         stove: "url(/stove-grid.jpg)",
+        wave: "url(/wave.svg)",
       },
     },
   },

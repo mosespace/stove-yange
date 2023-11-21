@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className='bg-white lg:my-5'>
+    <div className='bg-white lg:my-5 lg:px-20'>
       <div className='flex px-0 flex-col lg:grid lg:grid-flow-col gap-8 overflow-hidden'>
         <div className='row-span-full bg-teal-400 md:rounded-md relative isolate flex flex-col overflow-hidden px-8 justify-center w-full cursor-pointer h-[400px] lg:h-auto'>
           {/* <video
