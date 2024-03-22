@@ -4,8 +4,7 @@ import Alert from "./components/Alert";
 import { Poppins } from "next/font/google";
 import Nav from "./components/nav-bar/Nav";
 import { Context } from "./context/context";
-import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
+import { Toaster } from "sonner";
 import Footer from "./components/footer/Footer";
 
 const inter = Poppins({
@@ -22,7 +21,6 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <Providers>
-          <ToastContainer />
           <Context>
             <Alert />
             <Nav />
@@ -31,6 +29,12 @@ export default function RootLayout({ children }) {
             <script src='../path/to/flowbite/dist/flowbite.min.js'></script>
           </Context>
         </Providers>
+        <Toaster
+          position='bottom-right'
+          expand={false}
+          richColors
+          closeButton
+        />
       </body>
     </html>
   );
